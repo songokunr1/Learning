@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+.idea/
+logs/
+geckodriver.exe
+config*.json
+geckodriver*
+harmony/Harmony_backup_works.py
+harmony/download*
+harmony/test.py
+harmony/log.json

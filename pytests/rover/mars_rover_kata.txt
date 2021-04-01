@@ -1,0 +1,51 @@
+---------
+Your Task
+---------
+You're part of the team that explores Mars by sending remotely controlled vehicles to the surface of the planet.
+Develop an API that translates the commands sent from earth to instructions that are understood by the rover.
+
+------------
+Requirements
+------------
+You are given the initial starting point (x,y) of a rover and the direction (N,S,E,W) it is facing.
+
+The rover receives a character array of commands.
+
+Implement commands that move the rover forward/backward (f,b).
+
+Implement commands that turn the rover left/right (l,r).
+
+Implement wrapping from one edge of the grid to another. (planets are spheres after all)
+
+if time permits:
+Implement obstacle detection before each move to a new square.
+If a given sequence of commands encounters an obstacle,
+the rover moves up to the last possible point and reports the obstacle.
+
+-----------
+Assumptions
+-----------
+Assume Mars map is 100x100 square in cartesian coordinates:
+(0,0) bottom-left corner - (99,99) top-right corner
+
+-----
+Rules
+-----
+1. Stick strictly to the TDD workflow
+2. If you feel lost, either ask or trust the (above) process to drive the logic out
+3. Do not use the debugger or print statements to figure out what is going on,
+   trust your tests to tell you what the code is doing.
+
+-----------------------------
+CodingDojo using Randori form
+-----------------------------
+Looping process:
+1. coding is made by pair - pilot & copilot
+2. pilot is coding, copilot is reviewing/suggesting, rest of team is silent (just observing)
+3. pair starts from writing new test (it should fail) - RED phase
+4. pair is coding production code and runs test(s) till it is GREEN
+5. after passed test they can refactor - BLUE phase - only now dojo team can join code discussion
+6. switch pair:
+ - pilot goes back to team
+ - copilot becomes pilot
+ - new person from team joins as copilot

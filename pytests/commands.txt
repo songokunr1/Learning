@@ -1,0 +1,27 @@
+pytest test_example.py -v
+pytest test_example.py::test_add -v
+pytest -v -k "add or string"
+pytest -v -m string  # @pytest.mark.string na fukcja
+pytest -v -m number  # @pytest.mark.number
+pytest -v -x    # when some test failed than other test will not executed
+pytest -v -x --tb=no  # it wlll clear our termnal from more information
+pytest -v --maxfail=2
+pytest -v -s    # execute with print statment for example in the end after assert you are writing print('xxxxx')
+pytest -v --capture=no    # execute with print statment for example in the end after assert you are writing print('xxxxx')
+pytest -q  # quiet mode, only passed tests
+
+
+
+in test_example:
+@pytest.mark.number
+@pytest.mark.skip(reason="do not run this!") # whatever reason you can put here, and this test will be skipped
+
+
+
+what have i learn?
+(3,2) > (2, 9) True
+(3,2) > (3, 9) False!
+comparison tuples
+
+
+2) cls -> clear terminal

@@ -1,0 +1,1 @@
+print("dzien dobry \n hejo \n \t mike")
