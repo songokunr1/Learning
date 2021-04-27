@@ -4,4 +4,3 @@ from dekorators.module.dekorators import do_twice
 def say(a='hello!'):
     print(f'{a}')
 
-say
