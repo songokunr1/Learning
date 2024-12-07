@@ -1,17 +1,17 @@
 class Point:
 
-    def __init__(self, initX, initY):
+    def __init__(self, init_x, init_y):
 
-        self.x = initX
-        self.y = initY
+        self.x = init_x
+        self.y = init_y
 
-    def getX(self):
+    def get_x(self):
         return self.x
 
-    def getY(self):
+    def get_y(self):
         return self.y
 
-    def distanceFromOrigin(self):
+    def distance_from_origin(self):
         return ((self.x ** 2) + (self.y ** 2)) ** 0.5
 
     def __str__(self):
@@ -25,10 +25,8 @@ class Point:
 p = Point(3,4)
 q = Point(5,12)
 mid = p.halfway(q)
-# note that you would have exactly the same result if you instead wrote
-# mid = q.halfway(p)
-# because they are both Point objects, and the middle is the same no matter what
-
 print(mid)
-print(mid.getX())
-print(mid.getY())
+print(mid.get_x())
+print(mid.get_y())
+print(mid.distance_from_origin())
+

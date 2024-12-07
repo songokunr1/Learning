@@ -1,4 +1,4 @@
-import asyn2
+import asyncio
 import itertools
 
 async def spin(msg: str) -> None:
@@ -6,23 +6,23 @@ async def spin(msg: str) -> None:
         status = f'\r{char} {msg}'
         print(status, flush=True, end='')
         try:
-            await asyn2.sleep(.1)
-        except asyn2.CancelledError:
+            await asyncio.sleep(.1)
+        except asyncio.CancelledError:
             break
     blanks = ' ' * len(status)
     print(f'\r{blanks}\r', end='')
 
 async def slow() -> int:
-    await asyn2.sleep(3)
+    await asyncio.sleep(3)
     return 42
 
 
 def main() -> None:
-    result = asyn2.run(supervisor())
+    result = asyncio.run(supervisor())
     print(f'Answer: {result}')
 
 async def supervisor() -> int:
-    spinner = asyn2.create_task(spin('thinking!'))
+    spinner = asyncio.create_task(spin('thinking!'))
     print(f'spinner object: {spinner}')
     result = await slow()
     spinner.cancel()

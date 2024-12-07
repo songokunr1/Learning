@@ -6,5 +6,7 @@ conn = engine.connect()
 stmt = text("SELECT * FROM PRODUCT")
 results = conn.execute(stmt)
 
+print(results)
+
 for record in results:
     print(record)
