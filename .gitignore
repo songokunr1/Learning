@@ -9,3 +9,4 @@ harmony/Harmony_backup_works.py
 harmony/download*
 harmony/test.py
 harmony/log.json
+pyspark_learning/1/metastore_db
